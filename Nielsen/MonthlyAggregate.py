@@ -49,6 +49,8 @@ totalN = pd.read_excel('LATEST_DATA\\Total_Nielsen_Market.xlsx',
 lowes = pd.read_excel('LATEST_DATA\\Lowes_Retail_Trade_Area.xlsx', 
                       sheet_name = 'Report1', header=4)
 
+# Ensure H&G_AOD_Master_Item_Classification_File.xlsx is update regularly for recent classifications
+
 mclass = pd.read_excel('H&G_AOD_Master_Item_Classification_File.xlsx')
 
 # Update columns 
@@ -113,9 +115,9 @@ working_df = working_df[working_df['Trade Area'] != 'Walmart Total US TA']
 finaldf = working_df.append(walmart)
 
 
-"""
-Add Leading 0's for UPC
-"""
+
+# Add Leading 0's for UPC
+
 """
 def upcCoder(upc_list):
 
